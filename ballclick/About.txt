@@ -1,0 +1,3 @@
+This game is a simple Javascript game consisting of a ball moving and bouncing back and forth. The aim is to click the ball,
+by getting skilled at where to click.( The ball becomes progressively faster, and the difficulty increases).
+Have fun!!
