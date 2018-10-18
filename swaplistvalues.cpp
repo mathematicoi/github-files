@@ -1,10 +1,5 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
+//This is a sorting file, composed with C++.
+//It peeks into an array and sorts this array. I used references to perform the task.
 
 #include <iostream>
 
