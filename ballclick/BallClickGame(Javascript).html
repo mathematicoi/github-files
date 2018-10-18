@@ -1,0 +1,82 @@
+<canvas id="myCanvas" width="300" height="300"></canvas>
+
+   <div class="circle"></div>
+   <label>The Score is:</label>
+   <input id ="hi"></input>
+   <head>
+   	 <script>
+
+   	var canvas = document.getElementById("myCanvas");
+
+var CIRCLE = document.querySelector('.circle');
+
+
+var ctx = canvas.getContext("2d");
+var ballRadius = CIRCLE.style.radius;
+var x = canvas.width / 30;
+var y = canvas.height / 3;
+var dx = 0.1;
+var dy = -0.1;
+
+function draw() {
+
+
+  if (x + dx > canvas.width - 50 || x + dx < 0.1) {
+    dx = -dx;
+  }
+  if (y + dy > canvas.height - 55 || y + dy < 0.1) {
+    dy = -dy;
+  }
+
+  x += dx;
+  y += dy;
+
+  CIRCLE.style.left = x + 'px';
+  CIRCLE.style.top = -60 - y + 'px';
+  CIRCLE.style.right = -y + 'px';
+
+
+
+
+
+
+
+
+}
+
+var count = 0;
+
+function clicky() {
+  hi.value = count;
+  count++;
+  array = ['LightBlue', 'LightGreen','LightYellow'];
+  array2 = ['LightYellow','LightBlue', 'LightGreen'];
+  CIRCLE.style.backgroundColor = array[count % 3];
+  CIRCLE.style.borderColor = array2[count % 3];
+  dx = dx * 1.1;
+  dy = dy * 1.1;
+}
+
+setInterval(draw, 2);
+CIRCLE.addEventListener('click', clicky, false);
+</script>
+
+
+
+
+   </head>
+   <body>
+   	<style>
+   	canvas { background: #eee; }
+.circle {
+        position: relative;
+          object-position: 50% 50%; /* default value: image is centered*/
+
+        top: 1px;
+        width: 50px;
+        height: 50px;
+        color: transparent;
+        border: 2px solid red;
+        border-radius: 50%;
+    }</style>
+   </body>
