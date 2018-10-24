@@ -1,0 +1,2 @@
+This project is one of checking the status employees in an office, and the status of how full the rooms are.
+For the employees, it is marked with "in and out" to check the status; for the rooms it is marked by "full and empty".
